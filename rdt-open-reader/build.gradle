@@ -84,7 +84,7 @@ android {
 
     buildTypes {
         debug {
-            resValue "string", 'opensrp_base_url', '"https://rdt-stage.smartregister.org/opensrp/"'
+            resValue "string", 'opensrp_base_url', '"https://rdt.stage.sid-indonesia.org/opensrp/"'
             buildConfigField "int", "OPENMRS_UNIQUE_ID_INITIAL_BATCH_SIZE", '50'
             buildConfigField "int", "OPENMRS_UNIQUE_ID_BATCH_SIZE", '50'
             buildConfigField "boolean", "SAVE_IMAGES_TO_GALLERY", 'true'
@@ -129,7 +129,7 @@ android {
 
         covidIndonesia {
             applicationId "io.ona.diagnostics.rdt.configurable.id"
-            resValue "string", 'opensrp_base_url', '"https://covid.opensrp.id/opensrp/"'
+            resValue "string", 'opensrp_base_url', '"https://rdt.sid-indonesia.org/opensrp/"'
             buildConfigField "String", "LOCALE", "\"id\""
             versionName "v1.9.2"
             versionNameSuffix "-CONFIGURABLE-RDT"
