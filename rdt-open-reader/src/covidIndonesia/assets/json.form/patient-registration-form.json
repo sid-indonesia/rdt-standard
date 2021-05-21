@@ -338,7 +338,6 @@
         "type": "edit_text",
         "top_padding": "0dp",
         "v_email": {
-          "value": "true",
           "err": "{{patient-registration-form-original.step1.patient_email_address.v_email.err}}"
         }
       },
@@ -543,21 +542,8 @@
         "type": "edit_text",
         "edit_type": "number",
         "top_padding": "0dp",
-        "v_required": {
-          "value": "false",
-          "err": "{{patient-registration-form-original.step1.patient_whatsapp.v_required.err}}"
-        },
-        "v_numeric": {
-          "value": "true",
-          "err": "{{patient-registration-form-original.step1.patient_whatsapp.v_numeric.err}}"
-        },
-        "v_max_length": {
-          "value": "13",
-          "err": "{{patient-registration-form-original.step1.patient_whatsapp.v_max_length.err}}"
-        },
-        "v_min_length": {
-          "value": "8",
-          "err": "{{patient-registration-form-original.step1.patient_whatsapp.v_min_length.err}}"
+        "v_phone_number": {
+          "err": "{{patient-registration-form-original.step1.patient_whatsapp.v_phone_number.err}}"
         }
       },
       {
@@ -594,21 +580,8 @@
         "type": "edit_text",
         "edit_type": "number",
         "top_padding": "0dp",
-        "v_required": {
-          "value": "false",
-          "err": "{{patient-registration-form-original.step1.head_of_household_no.v_required.err}}"
-        },
-        "v_numeric": {
-          "value": "true",
-          "err": "{{patient-registration-form-original.step1.head_of_household_no.v_numeric.err}}"
-        },
-        "v_max_length": {
-          "value": "13",
-          "err": "{{patient-registration-form-original.step1.head_of_household_no.v_max_length.err}}"
-        },
-        "v_min_length": {
-          "value": "8",
-          "err": "{{patient-registration-form-original.step1.head_of_household_no.v_min_length.err}}"
+        "v_phone_number": {
+          "err": "{{patient-registration-form-original.step1.head_of_household_no.v_phone_number.err}}"
         }
       },
       {

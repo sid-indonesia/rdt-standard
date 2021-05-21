@@ -338,7 +338,6 @@
         "type": "edit_text",
         "top_padding": "0dp",
         "v_email": {
-          "value": "true",
           "err": "Please enter a valid email address"
         }
       },
@@ -543,21 +542,8 @@
         "type": "edit_text",
         "edit_type": "number",
         "top_padding": "0dp",
-        "v_required": {
-          "value": "false",
-          "err": ""
-        },
-        "v_numeric": {
-          "value": "true",
-          "err": "Value must be numeric"
-        },
-        "v_max_length": {
-          "value": "13",
-          "err": "Phone number cannot be more than 13 digits"
-        },
-        "v_min_length": {
-          "value": "8",
-          "err": "Phone number cannot be less than 8 digits"
+        "v_phone_number": {
+          "err": "Phone number must be numeric, between 8 and 13 digits"
         }
       },
       {
@@ -594,21 +580,8 @@
         "type": "edit_text",
         "edit_type": "number",
         "top_padding": "0dp",
-        "v_required": {
-          "value": "false",
-          "err": ""
-        },
-        "v_numeric": {
-          "value": "true",
-          "err": "Value must be numeric"
-        },
-        "v_max_length": {
-          "value": "13",
-          "err": "Phone number cannot be more than 13 digits"
-        },
-        "v_min_length": {
-          "value": "8",
-          "err": "Phone number cannot be less than 8 digits"
+        "v_phone_number": {
+          "err": "Phone number must be numeric, between 8 and 13 digits"
         }
       },
       {
