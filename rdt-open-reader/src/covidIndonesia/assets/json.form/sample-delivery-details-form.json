@@ -144,7 +144,7 @@
       {
         "key": "manual_sample_id_lbl",
         "type": "label",
-        "text": "{{sample-delivery-details-form-original.step4.manual_sample_id_lbl.text}}",
+        "text": "{{sample-delivery-details-form-original.step4.manual_sample_id_label.text}}",
         "text_color": "#000000",
         "relevance": {
           "rules-engine": {
@@ -172,7 +172,7 @@
       {
         "key": "courier_name_lbl",
         "type": "label",
-        "text": "{{sample-delivery-details-form-original.step4.courier_name_lbl.text}}",
+        "text": "{{sample-delivery-details-form-original.step4.courier_name_label.text}}",
         "text_color": "#000000"
       },
       {
@@ -186,7 +186,7 @@
       {
         "key": "courier_phone_number_lbl",
         "type": "label",
-        "text": "{{sample-delivery-details-form-original.step4.courier_phone_number_lbl.text}}",
+        "text": "{{sample-delivery-details-form-original.step4.courier_phone_number_label.text}}",
         "text_color": "#000000"
       },
       {
@@ -229,7 +229,7 @@
       {
         "key": "sender_name_lbl",
         "type": "label",
-        "text": "{{sample-delivery-details-form-original.step4.sender_name_lbl.text}}",
+        "text": "{{sample-delivery-details-form-original.step4.sender_name_label.text}}",
         "text_color": "#000000"
       },
       {
@@ -243,7 +243,7 @@
       {
         "key": "sender_phone_number_lbl",
         "type": "label",
-        "text": "{{sample-delivery-details-form-original.step4.sender_phone_number_lbl.text}}",
+        "text": "{{sample-delivery-details-form-original.step4.sender_phone_number_label.text}}",
         "text_color": "#000000"
       },
       {
