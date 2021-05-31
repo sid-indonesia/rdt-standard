@@ -131,7 +131,7 @@ android {
             applicationId "io.ona.diagnostics.rdt.configurable.id"
             resValue "string", 'opensrp_base_url', '"https://rdt.sid-indonesia.org/opensrp/"'
             buildConfigField "String", "LOCALE", "\"id\""
-            versionName "v1.9.2"
+            versionName "v1.9.2.1-rc.1"
             versionNameSuffix "-CONFIGURABLE-RDT"
             buildConfigField "int", "OPENMRS_UNIQUE_ID_SOURCE", '2'
             buildConfigField "String", "LOGIN_ACTIVITY", '"io.ona.rdt.activity.CovidLoginActivity"'
