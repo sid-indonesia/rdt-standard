@@ -36,12 +36,12 @@ public class RDTSyncConfigurationTest extends PowerMockTest {
         Assert.assertEquals(BuildConfig.OPENMRS_UNIQUE_ID_SOURCE, syncConfiguration.getUniqueIdSource());
         Assert.assertEquals(BuildConfig.MAX_SYNC_RETRIES, syncConfiguration.getSyncMaxRetries());
 
-        final String filterParam = BuildConfig.SYNC_FILTER_PARAM.equals(Constants.Config.TEAM)
-                ? SyncFilter.TEAM_ID.value() : SyncFilter.PROVIDER.value();
+        final String filterParam = BuildConfig.SYNC_FILTER_PARAM.equals(Constants.Config.LOCATION)
+                ? SyncFilter.LOCATION_ID.value() : SyncFilter.PROVIDER.value();
         Assert.assertEquals(filterParam, syncConfiguration.getSyncFilterParam().value());
 
-        final String filterValue = BuildConfig.SYNC_FILTER_PARAM.equals(Constants.Config.TEAM)
-                ? SyncFilter.TEAM.value() : SyncFilter.PROVIDER.value();
+        final String filterValue = BuildConfig.SYNC_FILTER_PARAM.equals(Constants.Config.LOCATION)
+                ? SyncFilter.LOCATION.value() : SyncFilter.PROVIDER.value();
         Assert.assertEquals(filterValue, syncConfiguration.getSyncFilterValue());
 
         Assert.assertEquals(BuildConfig.OAUTH_CLIENT_ID, syncConfiguration.getOauthClientId());
@@ -64,7 +64,7 @@ public class RDTSyncConfigurationTest extends PowerMockTest {
         doReturn(userService).when(drishtiContext).userService();
         doReturn(allSharedPreferences).when(userService).getAllSharedPreferences();
         doReturn(SyncFilter.PROVIDER.value()).when(allSharedPreferences).fetchRegisteredANM();
-        doReturn(SyncFilter.TEAM.value()).when(allSharedPreferences).fetchDefaultTeamId(SyncFilter.PROVIDER.value());
+        doReturn(SyncFilter.LOCATION.value()).when(allSharedPreferences).fetchDefaultLocalityId(SyncFilter.PROVIDER.value());
 
         PowerMockito.when(rdtApplication.getContext()).thenReturn(drishtiContext);
     }
