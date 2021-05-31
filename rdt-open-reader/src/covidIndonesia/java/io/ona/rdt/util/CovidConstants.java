@@ -132,4 +132,10 @@ public interface CovidConstants extends Constants {
     interface ScannerType {
         String SCANNER  = "scanner";
     }
+
+    interface Validation {
+        String V_MIN_ALLOWED_DATE = "v_min_allowed_date";
+        String V_EMAIL = "v_email";
+        String V_PHONE_NUMBER = "v_phone_number";
+    }
 }

@@ -1,6 +1,7 @@
 package io.ona.rdt.widget;
 
 import android.content.Context;
+import android.text.InputType;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
@@ -12,10 +13,14 @@ import com.vijay.jsonwizard.interfaces.CommonListener;
 import com.vijay.jsonwizard.utils.FormUtils;
 import com.vijay.jsonwizard.widgets.EditTextFactory;
 
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.List;
 
+import io.ona.rdt.util.CovidConstants;
+import io.ona.rdt.widget.validator.EmailValidator;
+import io.ona.rdt.widget.validator.PhoneNumberValidator;
 import timber.log.Timber;
 
 public class CovidEditTextFactory extends EditTextFactory {
@@ -38,6 +43,9 @@ public class CovidEditTextFactory extends EditTextFactory {
                 Timber.e(e);
             }
         });
+
+        addEmailValidator(jsonObject, editText);
+        addPhoneNumberValidator(jsonObject, editText);
 
         if (!jsonObject.has(JsonFormConstants.HINT)) {
             editText.setFloatingLabel(MaterialEditText.FLOATING_LABEL_NONE);
@@ -69,5 +77,21 @@ public class CovidEditTextFactory extends EditTextFactory {
 
     private int normalizeValue(Context context, JSONObject jsonObject, String key, int defaultValue) {
         return jsonObject.has(key) ? getValueFromSpOrDpOrPx(context, jsonObject.optString(key, "0dp")) : defaultValue;
+    }
+
+    private void addEmailValidator(JSONObject jsonObject, MaterialEditText editText) throws JSONException {
+        JSONObject object = jsonObject.optJSONObject(CovidConstants.Validation.V_EMAIL);
+        if (object != null) {
+            editText.setInputType(InputType.TYPE_TEXT_VARIATION_EMAIL_ADDRESS);
+            editText.addValidator(new EmailValidator(object.getString(JsonFormConstants.ERR)));
+        }
+    }
+
+    private void addPhoneNumberValidator(JSONObject jsonObject, MaterialEditText editText) throws JSONException {
+        JSONObject object = jsonObject.optJSONObject(CovidConstants.Validation.V_PHONE_NUMBER);
+        if (object != null) {
+            editText.setInputType(InputType.TYPE_CLASS_NUMBER);
+            editText.addValidator(new PhoneNumberValidator(object.getString(JsonFormConstants.ERR)));
+        }
     }
 }

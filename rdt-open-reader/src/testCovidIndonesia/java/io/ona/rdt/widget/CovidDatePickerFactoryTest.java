@@ -20,6 +20,7 @@ import java.util.List;
 
 import io.ona.rdt.R;
 import io.ona.rdt.robolectric.widget.WidgetFactoryRobolectricTest;
+import io.ona.rdt.util.CovidConstants;
 import io.ona.rdt.widget.validator.MinAllowedDateValidator;
 
 /**
@@ -68,7 +69,7 @@ public class CovidDatePickerFactoryTest extends WidgetFactoryRobolectricTest {
         JSONObject validator = new JSONObject();
         validator.put(JsonFormUtils.VALUE, minAllowedDate);
         validator.put(JsonFormConstants.ERR, "Expired VTM! Please use another.");
-        datePickerWidget.put(CovidDatePickerFactory.V_MIN_ALLOWED_DATE, validator);
+        datePickerWidget.put(CovidConstants.Validation.V_MIN_ALLOWED_DATE, validator);
         return datePickerWidget;
     }
 }
