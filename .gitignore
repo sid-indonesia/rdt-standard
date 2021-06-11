@@ -84,3 +84,7 @@ jacoco.exec
 
 .DS_Store
 /.project
+
+scripts/.ipynb_checkpoints
+scripts/device_definitions-rdt-og-*.json
+scripts/fhir-deviceDefinitions-list.csv
