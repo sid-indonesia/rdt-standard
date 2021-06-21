@@ -21,7 +21,6 @@ import java.util.List;
 import io.ona.rdt.util.CovidConstants;
 import io.ona.rdt.widget.validator.EmailValidator;
 import io.ona.rdt.widget.validator.PhoneNumberValidator;
-import timber.log.Timber;
 
 public class CovidEditTextFactory extends EditTextFactory {
 
@@ -36,13 +35,7 @@ public class CovidEditTextFactory extends EditTextFactory {
 
     @Override
     protected void attachLayout(String stepName, Context context, JsonFormFragment formFragment, JSONObject jsonObject, MaterialEditText editText, ImageView editButton) throws Exception {
-        formFragment.getJsonApi().getAppExecutors().mainThread().execute(() -> {
-            try {
-                CovidEditTextFactory.super.attachLayout(stepName, context, formFragment, jsonObject, editText, editButton);
-            } catch (Exception e) {
-                Timber.e(e);
-            }
-        });
+        super.attachLayout(stepName, context, formFragment, jsonObject, editText, editButton);
 
         addEmailValidator(jsonObject, editText);
         addPhoneNumberValidator(jsonObject, editText);
