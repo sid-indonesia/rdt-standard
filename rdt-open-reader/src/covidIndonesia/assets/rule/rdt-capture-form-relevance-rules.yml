@@ -44,6 +44,6 @@ actions:
 name: step11_antibody_type
 description: Antibody type
 priority: 1
-condition: "step11_chw_result_antibody.contains('reactive')"
+condition: "step11_chw_result_antibody == 'reactive'"
 actions:
   - "isRelevant = true"
