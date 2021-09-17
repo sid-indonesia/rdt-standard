@@ -178,6 +178,131 @@
         }
       },
       {
+        "key": "covid_vaccine_status",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "",
+        "type": "native_radio",
+        "label": "{{patient-diagnostics-form-original.step1.covid_vaccine_status.label}}",
+        "options": [
+          {
+            "key": "first_dose",
+            "text": "{{patient-diagnostics-form-original.step1.covid_vaccine_status.options.first_dose.text}}"
+          },
+          {
+            "key": "second_dose",
+            "text": "{{patient-diagnostics-form-original.step1.covid_vaccine_status.options.second_dose.text}}"
+          },
+          {
+            "key": "not_yet",
+            "text": "{{patient-diagnostics-form-original.step1.covid_vaccine_status.options.not_yet.text}}"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "{{patient-diagnostics-form-original.step1.covid_vaccine_status.v_required.err}}"
+        }
+      },
+      {
+        "key": "covid_vaccine_type",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "",
+        "type": "native_radio",
+        "label": "{{patient-diagnostics-form-original.step1.covid_vaccine_type.label}}",
+        "options": [
+          {
+            "key": "astrazeneca",
+            "text": "{{patient-diagnostics-form-original.step1.covid_vaccine_type.options.astrazeneca.text}}"
+          },
+          {
+            "key": "sinovac",
+            "text": "{{patient-diagnostics-form-original.step1.covid_vaccine_type.options.sinovac.text}}"
+          },
+          {
+            "key": "moderna",
+            "text": "{{patient-diagnostics-form-original.step1.covid_vaccine_type.options.moderna.text}}"
+          },
+          {
+            "key": "other",
+            "text": "{{patient-diagnostics-form-original.step1.covid_vaccine_type.options.other.text}}"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "{{patient-diagnostics-form-original.step1.covid_vaccine_type.v_required.err}}"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "patient-diagnostics-form-relevance-rules.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "covid_vaccine_type_other",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "",
+        "type": "edit_text",
+        "v_required": {
+          "value": "true",
+          "err": "{{patient-diagnostics-form-original.step1.covid_vaccine_type_other.v_required.err}}"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "patient-diagnostics-form-relevance-rules.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "covid_first_vaccine_date",
+        "type": "date_picker",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "",
+        "text": "{{patient-diagnostics-form-original.step1.covid_first_vaccine_date.text}}",
+        "hint": "{{patient-diagnostics-form-original.step1.covid_first_vaccine_date.hint}}",
+        "min_date": "today-10y",
+        "max_date": "today",
+        "v_required": {
+          "value": true,
+          "err": "{{patient-diagnostics-form-original.step1.covid_first_vaccine_date.v_required.err}}"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "patient-diagnostics-form-relevance-rules.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "covid_second_vaccine_date",
+        "type": "date_picker",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "",
+        "text": "{{patient-diagnostics-form-original.step1.covid_second_vaccine_date.text}}",
+        "hint": "{{patient-diagnostics-form-original.step1.covid_second_vaccine_date.hint}}",
+        "min_date": "today-10y",
+        "max_date": "today",
+        "v_required": {
+          "value": true,
+          "err": "{{patient-diagnostics-form-original.step1.covid_second_vaccine_date.v_required.err}}"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "patient-diagnostics-form-relevance-rules.yml"
+            }
+          }
+        }
+      },
+      {
         "key": "patient_age",
         "openmrs_entity_parent": "",
         "openmrs_entity": "",
